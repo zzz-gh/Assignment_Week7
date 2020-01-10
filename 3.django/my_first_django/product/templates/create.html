@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>{{page_title}}</title>
+            <style>
+                label{
+                    color: red;
+                    width: 200px;
+                    display: inline-block;
+                    padding-top: 15px;
+                }
+
+                input{
+                    box-shadow: 5px 2px 3px #010101;
+                }
+
+                #label_one{
+                    font-weight: bold;
+                }
+
+                form{
+                    box-shadow: 10px 2px 3px #201;
+                    border-radius: 5px;
+                }
+
+                button{
+                    background-color: #123456;
+                    padding: 10px 15px;
+                    border-radius: 3px;
+                    margin-top: 18px;
+                }
+
+                .boldClass{
+                    font-weight: bold;
+                    font-style: italic;
+                }
+                .italicClass{
+                    font-weight: bold;
+                }
+
+                h1{
+                    text-align: center;
+                    display: inline-block;
+                    width:100%;
+                    background-color: #213456;
+                    border-radius: 15px;
+                    color: whitesmoke;
+                    transition:all 3s ease;
+                }
+
+                h1:hover{
+                    color: #541;
+                }
+                form{
+                    padding: 20px;
+                    margin: 20px;
+                    border: 1px solid black;
+                }
+               
+            </style>
+        </head>
+        <body>
+            <h1>Create a new product here</h1>
+            
+            <form method = "POST"> 
+                
+                {% csrf_token %}
+                <label for = "name">
+                    Name: 
+                </label><input name="name"/><br/>
+                <label for = "description">
+                    Description: 
+                </label><input name="description"/><br/>
+                <label  for = "category" class="boldClass">
+                    Category: 
+                </label><input name="category"/><br/>
+                <label for = "create_at">
+                    Create_Date:
+                </label><input name="create_at"/><br/>
+                <button>Save item</button>
+            </form>
+        </body>
+</html>

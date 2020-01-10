@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>{{page_title}}</title>
+            <style>
+                h1{
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    background-color:#213456;
+                    border-radius: 15px;
+                    color:whitesmoke;
+                   
+                }
+
+                
+                #item {
+                    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                #item th,#item td{
+                    border: 1px solid rgb(131, 124, 124);
+                    padding: 8px;
+                    
+                }
+
+                #item tr:nth-child(even){
+                    background-color: #f2f2f2;
+                    
+                }
+
+                #item tr:hover {
+                    background-color: #ddd;
+                }
+
+                #item th{
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    background-color:#213456;
+                    color:white;}
+
+                
+                
+
+                .color{
+                    color: rgb(234, 0, 255); 
+                    font-weight: bold;
+                    font-style: italic;
+                    
+                }
+
+            </style>
+        </head>
+        <body>
+            <h1>Product_List Table</h1>
+            <p class= 'color'><a href="/product/create">Create the form</a></p>
+            
+                <!-- <a href="/product/detail/{{product.id}}">
+                    <h1>{{product.name}}</h1>
+                    <p>{{product.description}}</p>
+
+                </a> -->
+                <table  id = 'item'>
+                    <tr>
+                     <th>Product_Name</th>
+                     <th>Description</th>
+                     <th>Category</th>
+                     <th>Date</th>
+                    </tr>
+                    {% for product in products %}
+                        <tr>
+                        <td><a href="/product/detail/{{product.id}}">{{product.name}}</a></td>
+                        <td>{{product.description}}</td>
+                        <td>{{product.category}}</td>
+                        <td>{{product.create_at}}</td>
+                        </tr>
+                    {% endfor %}
+                </table id>
+                   
+                   
+                   
+        </body>
+</html>

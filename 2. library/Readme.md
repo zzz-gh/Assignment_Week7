@@ -1,0 +1,5 @@
+- Create an application for library
+- Library have multiple book but only two types SQL and Python
+- All SQL books have same writter: Anthony, same duration which can be borrow (2 days)
+- All Python books have same writter as well: Paul Barry, same duration which can be borrow (5 days)
+- Please create a list of book with 5 python books and 4 SQL Books
